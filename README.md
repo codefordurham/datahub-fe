@@ -5,7 +5,7 @@ ___
 
 ## Install angular-cli
 
-Ensure you have node 4.x.x and npm 3.x.x or newer, then install the angular cli:
+Ensure you have node 4.x.x and npm 3.x.x or newer, then install the angular cli (you may need to have root):  
 ```npm install -g @angular/cli```
 
 
