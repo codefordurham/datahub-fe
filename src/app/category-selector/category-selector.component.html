@@ -1,0 +1,9 @@
+<div id="categories">
+    <ul>
+    <li>Display Category:</li>
+    <li *ngFor="let category of categories">
+        <label><input type="checkbox" id="cbox" checked="checked" />
+        {{ category.name }}</label>
+    </li>
+    </ul>
+</div>

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { ViewListComponent } from './view-list/view-list.component';
+import { CategorySelectorComponent } from './category-selector/category-selector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BannerComponent,
     ListItemComponent,
-    ViewListComponent
+    ViewListComponent,
+    CategorySelectorComponent
   ],
   imports: [
     BrowserModule,
