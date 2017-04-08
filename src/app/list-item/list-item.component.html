@@ -1,5 +1,5 @@
 <div class="dataView">
-    <div class="dataView-header" (click)="toggleCollapsed()"> DataView #1 </div>
+    <div class="dataView-header" (click)="toggleCollapsed()"> {{ viewTitle }} </div>
     <div class="dataView-content" [ngClass]="{hide: !opened}">
         Data goes here
     </div>
