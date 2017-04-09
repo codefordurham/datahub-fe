@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-view-list',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-list.component.css']
 })
 export class ViewListComponent implements OnInit {
-  views = ['one', 'two', 'three']
+  @Input() views: string[];
   constructor() { }
 
   ngOnInit() {

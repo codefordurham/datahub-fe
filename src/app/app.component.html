@@ -1,3 +1,3 @@
 <app-banner></app-banner>
-<app-category-selector></app-category-selector>
-<app-view-list></app-view-list>
+<app-category-selector (onCategoriesChange)="onCategoriesChange($event)"></app-category-selector>
+<app-view-list [views]="views"></app-view-list>

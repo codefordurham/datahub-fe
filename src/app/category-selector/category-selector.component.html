@@ -2,8 +2,9 @@
     <ul>
     <li>Display Category:</li>
     <li *ngFor="let category of categories">
-        <label><input type="checkbox" id="cbox" checked="checked" />
-        {{ category.name }}</label>
+        <label><input type="checkbox" id="cbox" checked="checked" [(ngModel)]="category.checked" (change)="update()"/>
+            {{ category.name }}
+        </label>
     </li>
     </ul>
 </div>

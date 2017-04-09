@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-category-selector',
@@ -6,14 +6,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category-selector.component.css']
 })
 export class CategorySelectorComponent implements OnInit {
+  //Once we wire up to the back end, this will all come from real data
   categories = [
-    {name: "one-two", checked: false},
-    {name: "three",   checked: false}
+    {name: "one-two", views: [ "one", "two" ], checked: true},
+    {name: "three",   views: [ "three" ],      checked: true}
   ];
+
+  update() {
+    let views: string[] = [];
+    let category: any;
+    let view: string;
+
+    this.categories.forEach((category) => {
+        if (category.checked) {
+            category.views.forEach((view) => {
+                views.push(view);
+            });
+        }
+    });
+
+    this.onCategoriesChange.emit(views);
+  }
+
+  @Output() onCategoriesChange = new EventEmitter<string[]>();
 
   constructor() { }
 
   ngOnInit() {
+    this.update();
   }
 
 }
