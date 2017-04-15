@@ -9,18 +9,24 @@ import { ListItemComponent } from './list-item/list-item.component';
 import { ViewListComponent } from './view-list/view-list.component';
 import { CategorySelectorComponent } from './category-selector/category-selector.component';
 
+import { ChartsModule } from 'ng2-charts';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     BannerComponent,
     ListItemComponent,
     ViewListComponent,
-    CategorySelectorComponent
+    CategorySelectorComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
