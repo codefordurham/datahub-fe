@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CodeForDurham DataHub';
-  views: string[] = [];
+  views: { title: string, color: string }[] = [];
 
-  onCategoriesChange(views: string[]) {
+  onCategoriesChange(views: { title: string, color: string }[]) {
         this.views = views;
   }
 }

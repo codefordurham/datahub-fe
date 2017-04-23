@@ -7,28 +7,56 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class CategorySelectorComponent implements OnInit {
   //Once we wire up to the back end, this will all come from real data
+
+  colors = [
+    "Blue",
+    "Red",
+    "Green",
+    "Yellow",
+    "BlueViolet",
+    "Brown",
+    "Cyan",
+    "DarkRed",
+    "Fuchsia",
+    "Gold",
+    "HotPink",
+    "Navy",
+    "OrangeRed",
+    "Purple",
+    "Turquoise"
+  ]
+
   categories = [
     {name: "one-two", views: [ "one", "two" ], checked: true},
     {name: "three",   views: [ "three" ],      checked: true}
   ];
 
   update() {
-    let views: string[] = [];
+    let views: { title: string, color: string }[] = [];
     let category: any;
-    let view: string;
+    let viewName: string;
+
+    let colorPointer: number = 0;
 
     this.categories.forEach((category) => {
         if (category.checked) {
-            category.views.forEach((view) => {
+            category.views.forEach((viewName) => {
+                let view = { title: "", color: ""};
+                view.title = viewName;
+                view.color = this.colors[colorPointer];
                 views.push(view);
             });
+        }
+        ++colorPointer;
+        if (colorPointer == this.colors.length) {
+            colorPointer = 0;
         }
     });
 
     this.onCategoriesChange.emit(views);
   }
 
-  @Output() onCategoriesChange = new EventEmitter<string[]>();
+  @Output() onCategoriesChange = new EventEmitter<{ title: string, color: string}[]>();
 
   constructor() { }
 

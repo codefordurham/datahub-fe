@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./view-list.component.css']
 })
 export class ViewListComponent implements OnInit {
-  @Input() views: string[];
+  @Input() views: { title: string, color: string }[];
   constructor() { }
 
   ngOnInit() {

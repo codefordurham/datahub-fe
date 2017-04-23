@@ -1,5 +1,8 @@
 <div class="dataView">
-    <div class="dataView-header" (click)="toggleCollapsed()"> {{ viewTitle }} </div>
+    <div class="dataView-header"
+         [ngStyle]="{'color': viewColor}"
+         (click)="toggleCollapsed()"> {{ viewTitle }} ( {{ viewColor }} )
+    </div>
     <div class="dataView-content" [ngClass]="{hide: !opened}">
         <app-bar-chart></app-bar-chart>
     </div>

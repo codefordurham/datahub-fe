@@ -9,8 +9,11 @@ export class ListItemComponent implements OnInit {
   opened: Boolean = false;
 
   @Input() viewTitle: string;
+  @Input() public viewColor: string;
 
-  constructor() { }
+  constructor() {
+    console.log(this.viewTitle);
+  }
 
   ngOnInit() {
   }
