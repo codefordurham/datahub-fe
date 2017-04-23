@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ViewInfo } from '../datahubTypes';
 
 @Component({
   selector: 'app-view-list',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./view-list.component.css']
 })
 export class ViewListComponent implements OnInit {
-  @Input() views: { title: string, color: string }[];
+  @Input() views: ViewInfo[];
   constructor() { }
 
   ngOnInit() {

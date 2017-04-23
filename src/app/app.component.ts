@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ViewInfo } from './datahubTypes';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CodeForDurham DataHub';
-  views: { title: string, color: string }[] = [];
+  views: ViewInfo[] = [];
 
-  onCategoriesChange(views: { title: string, color: string }[]) {
+  onCategoriesChange(views: ViewInfo[]) {
         this.views = views;
   }
 }

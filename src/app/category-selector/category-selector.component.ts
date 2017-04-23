@@ -1,10 +1,12 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ViewInfo } from '../datahubTypes';
 
 @Component({
   selector: 'app-category-selector',
   templateUrl: './category-selector.component.html',
   styleUrls: ['./category-selector.component.css']
 })
+
 export class CategorySelectorComponent implements OnInit {
   //Once we wire up to the back end, this will all come from real data
 
@@ -46,7 +48,7 @@ export class CategorySelectorComponent implements OnInit {
   ];
 
   update() {
-    let views: { title: string, color: string }[] = [];
+    let views: ViewInfo[] = [];
     let category: any;
     let viewName: string;
 
@@ -55,7 +57,7 @@ export class CategorySelectorComponent implements OnInit {
     this.categories.forEach((category) => {
         if (category.checked) {
             category.views.forEach((viewName) => {
-                let view = { title: "", color: ""};
+                let view = new ViewInfo();;
                 view.title = viewName;
                 view.color = this.colors[colorPointer];
                 views.push(view);
@@ -70,7 +72,7 @@ export class CategorySelectorComponent implements OnInit {
     this.onCategoriesChange.emit(views);
   }
 
-  @Output() onCategoriesChange = new EventEmitter<{ title: string, color: string}[]>();
+  @Output() onCategoriesChange = new EventEmitter<ViewInfo[]>();
 
   constructor() { }
 
