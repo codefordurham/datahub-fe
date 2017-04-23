@@ -12,7 +12,6 @@ export class ListItemComponent implements OnInit {
   @Input() public viewColor: string;
 
   constructor() {
-    console.log(this.viewTitle);
   }
 
   ngOnInit() {
