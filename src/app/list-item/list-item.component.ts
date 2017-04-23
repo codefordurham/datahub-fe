@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ViewInfo, LineGraphData } from '../datahubTypes';
 
 @Component({
   selector: 'app-list-item',
@@ -8,8 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ListItemComponent implements OnInit {
   opened: Boolean = false;
 
-  @Input() viewTitle: string;
-  @Input() public viewColor: string;
+  @Input() viewInfo: ViewInfo;
 
   constructor() {
   }
