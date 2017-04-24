@@ -1,14 +1,13 @@
 
 export class LineGraphData {
-  getLineGraphData() {}
 }
 
 export class BarGraphData {
-  getBarGraphData() {}
+  labels: string[];
+  data: {data:number[], label: string }[];
 }
 
 export class BoxPlotData {
-  getBoxPlotData() {}
 }
 
 export class ViewInfo {

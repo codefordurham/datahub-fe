@@ -5,7 +5,7 @@
     </div>
     <div class="dataView-content" [ngSwitch]="viewInfo.type" [ngClass]="{hide: !opened}">
         <div *ngSwitchCase="'LineGraph'">lineGraph</div>
-        <app-bar-graph *ngSwitchCase="'BarGraph'"></app-bar-graph>
+        <app-bar-graph *ngSwitchCase="'BarGraph'" [data]="viewInfo.data"></app-bar-graph>
         <div *ngSwitchCase="'BoxPlot'">boxPlot</div>
     </div>
 </div>

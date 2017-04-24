@@ -29,6 +29,8 @@ export class CategorySelectorComponent implements OnInit {
     "Turquoise"
   ]
 
+  public categories = categories;
+
   update() {
     let views: ViewInfo[] = [];
     let category: any;

@@ -6,6 +6,7 @@ import { ViewInfo, LineGraphData } from '../datahubTypes';
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.css']
 })
+
 export class ListItemComponent implements OnInit {
   opened: Boolean = false;
 
