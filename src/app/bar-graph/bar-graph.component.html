@@ -1,11 +1,11 @@
 <div>
   <div style="display: block">
     <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [legend]="barChartLegend"
-            [chartType]="barChartType"
+            [datasets]="barGraphData"
+            [labels]="barGraphLabels"
+            [options]="barGraphOptions"
+            [legend]="barGraphLegend"
+            [chartType]="barGraphType"
             (chartHover)="chartHovered($event)"
             (chartClick)="chartClicked($event)"></canvas>
   </div>
