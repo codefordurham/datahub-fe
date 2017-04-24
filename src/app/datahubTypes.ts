@@ -1,5 +1,7 @@
 
 export class LineGraphData {
+  labels: string[];
+  data: {data:number[], label: string }[];
 }
 
 export class BarGraphData {

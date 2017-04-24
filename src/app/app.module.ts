@@ -11,6 +11,7 @@ import { CategorySelectorComponent } from './category-selector/category-selector
 
 import { ChartsModule } from 'ng2-charts';
 import { BarGraphComponent } from './bar-graph/bar-graph.component';
+import { LineGraphComponent } from './line-graph/line-graph.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BarGraphComponent } from './bar-graph/bar-graph.component';
     ListItemComponent,
     ViewListComponent,
     CategorySelectorComponent,
-    BarGraphComponent
+    BarGraphComponent,
+    LineGraphComponent
   ],
   imports: [
     BrowserModule,
