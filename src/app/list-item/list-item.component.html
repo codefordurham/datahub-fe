@@ -3,7 +3,9 @@
          [ngStyle]="{'color': viewInfo.color}"
          (click)="toggleCollapsed()"> {{ viewInfo.title }}
     </div>
-    <div class="dataView-content" [ngClass]="{hide: !opened}">
-        <app-bar-chart></app-bar-chart>
+    <div class="dataView-content" [ngSwitch]="viewInfo.type" [ngClass]="{hide: !opened}">
+        <div *ngSwitchCase="'LineGraph'">lineGraph</div>
+        <app-bar-graph *ngSwitchCase="'BarGraph'"></app-bar-graph>
+        <div *ngSwitchCase="'BoxPlot'">boxPlot</div>
     </div>
 </div>

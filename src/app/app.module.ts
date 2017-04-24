@@ -10,7 +10,7 @@ import { ViewListComponent } from './view-list/view-list.component';
 import { CategorySelectorComponent } from './category-selector/category-selector.component';
 
 import { ChartsModule } from 'ng2-charts';
-import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { BarChartComponent } from './bar-graph/bar-graph.component';
 
 
 @NgModule({

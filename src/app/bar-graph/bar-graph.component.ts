@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js';
 
 @Component({
-  selector: 'app-bar-chart',
-  templateUrl: './bar-chart.component.html',
-  styleUrls: ['./bar-chart.component.css']
+  selector: 'app-bar-graph',
+  templateUrl: './bar-graph.component.html',
+  styleUrls: ['./bar-graph.component.css']
 })
 export class BarChartComponent implements OnInit {
   public barChartOptions:any = {
